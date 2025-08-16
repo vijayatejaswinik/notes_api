@@ -1,15 +1,83 @@
-# Notes REST API
+# Notes API
 
-A minimal backend project built using Node.js and Express.js.
+A simple REST API built with **Node.js** and **Express** to manage notes (Create, Read, Delete).
 
-## 🌟 Features
-- Add notes with title and content
-- View all notes
-- Delete notes by ID
-- Data stored in memory (can be extended to database)
+---
 
-## 🚀 Run Locally
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/vijayatejaswinik/notes_api.git
-   cd notes-api
+## 🚀 How to Run
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/notes_api.git
+   cd notes_api
+   ```
+
+2. Install dependencies:
+```sh
+npm install
+```
+3. Start the server:
+```sh
+node index.js
+```
+Server runs on: http://localhost:3000
+
+📌 API Endpoints
+➕ Create a Note
+```
+POST /notes
+Content-Type: application/json
+
+{
+  "title": "Study",
+  "content": "Do DSA practice"
+}
+```
+✅ Response:
+```
+json
+Copy
+Edit
+{
+  "id": 1,
+  "title": "Study",
+  "content": "Do DSA practice"
+}
+```
+📖 Get All Notes
+```
+GET /notes
+```
+✅ Response:
+```
+[
+  {
+    "id": 1,
+    "title": "Study",
+    "content": "Do DSA practice"
+  }
+]
+```
+❌ Delete a Note
+```
+DELETE /notes/1
+```
+✅ Response:
+
+```
+{ "message": "Note deleted successfully" }
+```
+📄 Tech Stack
+```
+Node.js
+
+Express.js
+
+REST API principles
+```
+
+📌 Author: 
+Kammari Vijaya Tejaswini
+
+
+---
