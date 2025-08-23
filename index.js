@@ -9,7 +9,7 @@ let id = 1;
 
 // Root route (fixes "Cannot GET /")
 app.get("/", (req, res) => {
-  res.send("Welcome to Notes API 🚀. Try /notes");
+  res.send("Welcome to Notes API . Try /notes");
 });
 
 // Create a note
@@ -33,5 +33,5 @@ app.delete("/notes/:id", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
