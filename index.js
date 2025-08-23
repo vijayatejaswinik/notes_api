@@ -7,9 +7,9 @@ app.use(express.json());
 let notes = [];
 let id = 1;
 
-// Root route (fixes "Cannot GET /")
+// Root route 
 app.get("/", (req, res) => {
-  res.send("Welcome to Notes API . Try /notes");
+  res.send("Welcome to Notes API ");
 });
 
 // Create a note
